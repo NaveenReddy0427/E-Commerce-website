@@ -68,6 +68,7 @@ body{
 #navbar li{
     list-style: none;
     padding: 0 20px;
+    position: relative;
 
 }
 
@@ -76,9 +77,59 @@ body{
     font-size: 15px;
     font-weight: 650;
     color: #1a1a1a;
+    transition: 0.4s;
 }
 
 /* hover style need to change */
-#navbar li a:hover{
+#navbar li a:hover,
+#navbar li a.active{
     color: #088178;
+}
+
+/* psuedo style need to change */
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    left: 20px;
+    bottom: -4px;
+}
+
+
+/*hero section*/
+
+#hero{
+    background-image: url('./images/hero4.png');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: #088178;
+}
+
+#hero button{
+    background-image: url('./images/button.png');
+    background-color: transparent;
+    border: 0;
+    color: #088178;
+    padding: 15px 80px 14px 75px;
+    font-size: 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
 }
